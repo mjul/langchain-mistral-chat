@@ -189,6 +189,17 @@ tests = ["attrs[tests-no-zope]", "zope-interface"]
 tests-no-zope = ["cloudpickle", "hypothesis", "mypy (>=1.1.1)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "pytest-xdist[psutil]"]
 
 [[package]]
+name = "bitsandbytes"
+version = "0.41.3"
+description = "k-bit optimizers and matrix multiplication routines."
+optional = false
+python-versions = "*"
+files = [
+    {file = "bitsandbytes-0.41.3-py3-none-any.whl", hash = "sha256:0060b1597236a5d52924fc911eb78d0f1482b7183c1d8a89312fb88c559aab86"},
+    {file = "bitsandbytes-0.41.3.tar.gz", hash = "sha256:016de5075cd96b86ca195c18b48df694af84c9ef4a10ec3cd1bfffd3b333164e"},
+]
+
+[[package]]
 name = "certifi"
 version = "2023.11.17"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -2519,4 +2530,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "ccf81d7ff1ffa5d901b8f2953dafdba46706852f7d4ae24454c64a50a357b9a2"
+content-hash = "5b3b398d044113527c507290a363aafdb7f2a4986207b099e9d06e838f5c3683"

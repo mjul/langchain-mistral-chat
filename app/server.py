@@ -3,10 +3,6 @@ from fastapi.responses import RedirectResponse
 from langserve import add_routes
 from .chatbot import chain as chatbot_chain
 
-import os
-
-print("KEYS", sorted(os.environ.keys()))
-
 app = FastAPI()
 
 

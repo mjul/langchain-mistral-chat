@@ -14,6 +14,30 @@ Install dependencies with `poetry install` from the root folder.
 
 The project was created with `langchain app new .` in the root folder.
 
+## Notes on PyTorch on Windows
+
+Now, if you try to install the PyTorch "wheels" you may note that 
+the `triton` dependency is not available for Windows. Apparently that library 
+does not have the proper tagging so Poetry does not pick it up 
+(you can install it from `pip`). 
+
+There is a workaround for this in the `pyproject.toml` file,
+pointing to a specific wheel file for a specific Windows, using a specific wheels package:
+
+```toml
+torch = {url = "https://download.pytorch.org/whl/cu118/torch-2.1.1%2Bcu118-cp311-cp311-win_amd64.whl" }
+```
+
+
+Normally you would just use the PyTorch cuda wheels for your specific platform, e.g. pulling
+them from the [PyTorch website](https://pytorch.org/get-started/locally/).
+
+```toml
+torch = {version = "^2.1.1", source = "pytorch"}
+```
+
+Use `poetry show --tree torch` to see the dependency tree.
+
 
 ## Installation
 
